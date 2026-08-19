@@ -1,0 +1,3 @@
+## Number of examples
+
+Currently there are {{ git_count_files(pattern="src/**/*.kt") }} examples in this repo.
