@@ -4,3 +4,20 @@
 # with load_lua (the pyanyzip pattern). The pydmt mako templates are gone.
 [processor.tera]
 src_dirs = ["tera.templates"]
+
+# The Makefile compiled each src/**/*.kt into a runnable jar with
+# `kotlinc x.kt -include-runtime -d x.jar`. The generator drives
+# scripts/kotlinc_build.py, which runs the same compile.
+[processor.generator.kotlin]
+command = "scripts/kotlinc_build.py"
+src_dirs = ["src"]
+src_extensions = [".kt"]
+output_dir = "out"
+output_extension = "jar"
+batch = false
+
+# kotlinc (the Kotlin compiler) builds the demos.
+[dependencies]
+system = [
+    "kotlin",
+]
