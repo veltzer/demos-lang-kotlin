@@ -5,7 +5,7 @@
 
 description: Demos for the kotlin language
 
-project website: https://veltzer.github.io/demos-lang-kotlin
+project website: <https://veltzer.github.io/demos-lang-kotlin>
 
 author: Mark Veltzer
 
